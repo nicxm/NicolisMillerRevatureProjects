@@ -6,8 +6,8 @@
 
 
 package game;
-
 import java.util.Scanner;
+
 
 public class Main extends RoomManager {
 
@@ -43,10 +43,7 @@ public class Main extends RoomManager {
 	player.getCurrentRoom();
 	//Prints out the current room name and descriptions
 	System.out.println(player.currentRoom.getName() + "\n");
-	
 	System.out.println(player.currentRoom.getLongDescription() + "\n");
-	
-	//System.out.println(player.currentRoom.getExit("North"));
 	}
 
 	private static String[] collectInput() {
@@ -70,8 +67,22 @@ public class Main extends RoomManager {
 			gameRunning = 0;
 			}
 		//MOVEMENT
-		if (input[0].equals("Go")) {
+		switch (input[0]) {
+		case "Go" :
 			Main.movement(input, player);
+			break;
+		case "Move" :
+			Main.movement(input, player);
+			break;
+		case "G" :
+			Main.movement(input, player);
+			break;
+		case "M" :
+			Main.movement(input, player);
+			break;
+		default:
+			System.out.println("\nOops!\nYou may have misspelled an action!\n");
+			break;
 		}
 	}
 	
@@ -94,7 +105,7 @@ public class Main extends RoomManager {
 				player.setCurrentRoom(manager.rooms[4]);
 				break;
 			default:
-				System.out.println("\nOops!\nYou may have misspelled an action!\n");
+				System.out.println("\nOops!\nYou may have misspelled an Direction!\n");
 				break;
 			}
 			
@@ -115,7 +126,7 @@ public class Main extends RoomManager {
 				System.out.println("You try to walk south, but end up hitting the wall thats in that direction.\n");
 				break;
 			default:
-				System.out.println("\nOops!\nYou may have misspelled an action!\n");
+				System.out.println("\nOops!\nYou may have misspelled an Direction!\n");
 				break;
 			}
 		} else if(player.currentRoom.equals(manager.rooms[2])) {
@@ -136,7 +147,7 @@ public class Main extends RoomManager {
 				player.setCurrentRoom(manager.rooms[0]);
 				break;
 			default:
-				System.out.println("\nOops!\nYou may have misspelled an action!\n");
+				System.out.println("\nOops!\nYou may have misspelled an Direction!\n");
 				break;
 			}
 		} else if(player.currentRoom.equals(manager.rooms[3])) {
@@ -156,7 +167,7 @@ public class Main extends RoomManager {
 				player.setCurrentRoom(manager.rooms[2]);
 				break;
 			default:
-				System.out.println("\nOops!\nYou may have misspelled an action!\n");
+				System.out.println("\nOops!\nYou may have misspelled an Direction!\n");
 				break;
 			}
 		} else if(player.currentRoom.equals(manager.rooms[4])) {
@@ -176,7 +187,7 @@ public class Main extends RoomManager {
 				System.out.println("You shouldn't walk into the road.\n");
 				break;
 			default:
-				System.out.println("\nOops!\nYou may have misspelled an action!\n");
+				System.out.println("\nOops!\nYou may have misspelled an Direction!\n");
 				break;
 			}
 		}
