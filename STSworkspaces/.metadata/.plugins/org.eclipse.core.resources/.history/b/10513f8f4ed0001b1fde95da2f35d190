@@ -1,0 +1,9 @@
+package com.nicolis.test;
+import java.util.ArrayList;
+import com.nicolis.model.item;
+
+public class TestArrayList {
+	public static void main(String[] args) {
+		
+	}
+}

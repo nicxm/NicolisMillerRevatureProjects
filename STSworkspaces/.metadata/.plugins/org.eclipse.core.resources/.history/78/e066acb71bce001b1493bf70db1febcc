@@ -1,0 +1,13 @@
+package com.example.test;
+
+import com.example.model.Whale;
+import com.example.model.Swimmer;
+
+public class TestSwimmer {
+
+    public static void main(String[] args) {
+        Swimmer beluga;
+        beluga = new Whale(); 
+        beluga.swim(); 
+    }
+}

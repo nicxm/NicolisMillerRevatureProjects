@@ -1,0 +1,74 @@
+package game;
+
+import fixtures.Room;
+
+public class RoomManager {
+
+	public Room startingRoom;
+	public Room[] rooms;
+	
+
+	public RoomManager(int roomCount) {
+		super();
+		
+		rooms = new Room[roomCount];
+	}
+
+	public void init() {
+	    Room foyer = new Room(
+			"The Foyer",
+			"A small foyer",
+			"The small entryway of a house. A kitchen is open to the north, where a large counter can be seen." + "\n"
+			+ "The hardwood floor leads west into the Bedroom." + "\n"
+			+ "To the South is to the outside, where you entered the house from.");
+			this.rooms[0] = foyer;
+	        this.startingRoom = foyer;
+	        
+	        
+	    Room bedroom = new Room(
+	    	"The Bedroom",
+	    	"A quiet little bedroom",
+	    	"The small entryway of a neo-colonial house. A dining room is open to the south, where a large table can be seen." + "\n"
+	    	+ "The hardwood floor leads west into doorway, next to a staircase that leads up to a second floor." + "\n"
+	    	+ "To the north is a small room, where you can see a piano.");
+	    	this.rooms[1] = bedroom;
+	    Room kitchen = new Room(
+	    	"The Kitchen",
+	    	"A nice, clean kitchen",
+	    	"The small entryway of a neo-colonial house. A dining room is open to the south, where a large table can be seen." + "\n"
+	    	+ "The hardwood floor leads west into doorway, next to a staircase that leads up to a second floor." + "\n"
+	    	+ "To the north is a small room, where you can see a piano.");
+	    	this.rooms[2] = kitchen;
+	    Room backyard = new Room(
+	    	"The Backyard",
+	    	"A sunny backyard",
+	    	"The small entryway of a neo-colonial house. A dining room is open to the south, where a large table can be seen." + "\n"
+	    	+ "The hardwood floor leads west into doorway, next to a staircase that leads up to a second floor." + "\n"
+	    	+ "To the north is a small room, where you can see a piano.");
+	    	this.rooms[3] = backyard;
+	    Room frontyard = new Room(
+	    	 "The Frontyard",
+	    	 "A recently mowed front lawn",
+	    	 "The small entryway of a neo-colonial house. A dining room is open to the south, where a large table can be seen." + "\n"
+	    	 + "The hardwood floor leads west into doorway, next to a staircase that leads up to a second floor." + "\n"
+	    	 + "To the north is a small room, where you can see a piano.");
+	    	 this.rooms[4] = frontyard;
+	}
+
+	public Room getStartingRoom() {
+		return this.startingRoom;
+	}
+	
+	public void setStartingRoom(Room startingRoom) {
+		this.startingRoom = startingRoom;
+	}
+	
+	public Room[] getRooms() {
+		return this.rooms;
+	}
+	
+	public void setRooms(Room[] rooms) {
+		this.rooms = rooms;
+	}
+	
+}

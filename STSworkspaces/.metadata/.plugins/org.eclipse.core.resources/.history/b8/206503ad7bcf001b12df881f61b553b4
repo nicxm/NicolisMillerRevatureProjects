@@ -1,0 +1,90 @@
+package game;
+
+import java.util.Scanner;
+import fixtures.Fixture;
+import fixtures.Room;
+
+public class Main extends RoomManager {
+
+	public Main(int roomCount) {
+		super(roomCount);
+	}
+
+	private static RoomManager manager = new RoomManager(3);
+	static int gameRunning = 1;
+	
+	public static void main(String[] args) {
+		//Initialization
+		manager.init();
+		Player player = new Player();
+		player.setCurrentRoom(manager.getStartingRoom());
+		//Initialization
+		
+		while (gameRunning == 1) {
+			// GAME LOOP
+			Main.printRoom(player);
+			String[] input = Main.collectInput();
+			Main.parse(input, player);
+			// GAME LOOP
+		}
+		//Ends the game with a message
+		if (gameRunning == 0) {
+			System.out.println("Thanks for Playing!");
+		}
+	}
+
+
+	private static void printRoom(Player player) {
+	player.getCurrentRoom();
+	//Prints out the current room name and descriptions
+	System.out.println(player.currentRoom.getName() + "\n\n");
+	System.out.println(player.currentRoom.getLongDescription() + "\n\n");
+	}
+
+	private static String[] collectInput() {
+			//Collects input and splits the sentence into an array of words.
+		 	Scanner scanner = new Scanner(System.in);
+	        System.out.println("\nPlease type in a Command and a Location\nex:\"Go North\"");
+
+	        String input = scanner.nextLine();
+	        String[] strArr = input.split(" "); 
+
+	        //Closes the scanner when the game is quit.
+	        if (gameRunning == 0) {
+				scanner.close();
+			}
+	        return strArr;
+	}
+	
+		
+	public static void parse(String[] input, Player player ) {
+		//TEST
+		//System.out.println(input[0]);
+		//System.out.println(input[1]);
+		if (input[0].equals("Close") | input[0].equals("Quit")) {
+			gameRunning = 0;
+			}
+		if (input[0].equals("Go") | input[1].equals("Move")) {
+
+			if (input[1].equals("North") | input[1].equals("N")) {
+				System.out.println("You went North\n");
+				if(player.currentRoom.equals(manager.rooms[0])) {
+					System.out.println("You walk into the Kitchen\n");
+				}
+				player.setCurrentRoom(manager.rooms[0]);
+				
+			} else if (input[1].equals("West") | input[1].equals("W")) {
+				System.out.println("You went West");
+				
+			} else if (input[1].equals("East") | input[1].equals("E")) {
+				System.out.println("You went East");
+				
+			} else if (input[1].equals("South") | input[1].equals("S")) {
+				System.out.println("You went South");
+				
+			}
+			
+
+		}
+	}
+}

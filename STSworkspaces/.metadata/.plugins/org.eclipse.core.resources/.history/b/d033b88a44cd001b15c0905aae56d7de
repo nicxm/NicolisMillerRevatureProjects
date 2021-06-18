@@ -1,0 +1,10 @@
+package fixtures;
+
+public abstract class Fixture {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

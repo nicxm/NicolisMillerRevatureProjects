@@ -1,0 +1,14 @@
+package fixtures;
+
+/*
+ * public Room(String name, String shortDescription, String longDescription) {
+		
+		super(name, shortDescription, longDescription);
+		this.exits = new Room[1];
+ * 
+ */
+
+public class Room {
+
+
+}

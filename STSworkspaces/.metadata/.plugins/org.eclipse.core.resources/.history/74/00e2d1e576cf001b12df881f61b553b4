@@ -1,0 +1,28 @@
+package fixtures;
+
+public class Room extends Fixture {
+	
+	private Room[] exits;
+
+	public Room(String name, String shortDescription, String longDescription) {
+		super(name, shortDescription, longDescription);
+		this.setExits(new Room[3]);
+	}
+		
+	public Room[] getExits() {
+		
+		
+		return this.exits;
+	}
+		
+	public Room getExit(String direction) {
+		
+		
+		return null;
+	}
+
+	public void setExits(Room[] exits) {
+		this.exits = exits;
+	}
+	
+}
