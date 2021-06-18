@@ -5,4 +5,6 @@
     <fullyQualifiedTypeName name="fixtures.Fixture"/>
     <fullyQualifiedTypeName name="fixtures.Room"/>
     <fullyQualifiedTypeName name="game.Player"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
