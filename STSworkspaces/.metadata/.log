@@ -4475,3 +4475,15 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-21 13:50:55.009
 !MESSAGE executing callback sts4.classpath.CjeAMQUS SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-21 16:45:09.554
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.CjeAMQUS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-21 16:45:09.555
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.CjeAMQUS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-21 16:45:09.556
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-21 16:45:09.556
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.CjeAMQUS => OK
