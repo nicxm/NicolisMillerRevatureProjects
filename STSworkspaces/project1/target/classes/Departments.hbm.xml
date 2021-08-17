@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jul 20, 2021, 9:36:04 PM by Hibernate Tools 5.4.30.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.nicolis.models.Departments" optimistic-lock="none" polymorphism="implicit" schema="public" select-before-update="false" table="departments">
+        <id name="deptId" type="int">
+            <column name="dept_id"/>
+            <generator class="increment"/>
+        </id>
+        <property generated="never" lazy="false" name="DName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="d_name"/>
+        </property>
+        <property generated="never" lazy="false" name="DHead" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="d_head"/>
+        </property>
+       
+    </class>
+</hibernate-mapping>

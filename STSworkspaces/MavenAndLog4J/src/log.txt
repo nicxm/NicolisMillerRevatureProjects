@@ -1,0 +1,15 @@
+2021-06-25 11:10:50 DEBUG LoggingExamples:13 - statement for debuging
+2021-06-25 11:10:50 INFO  LoggingExamples:14 - info
+2021-06-25 11:10:50 WARN  LoggingExamples:15 - warning
+2021-06-25 11:10:50 ERROR LoggingExamples:16 - Error
+2021-06-25 11:10:50 FATAL LoggingExamples:17 - Fatal
+2021-06-25 11:11:34 DEBUG LoggingExamples:13 - statement for debuging
+2021-06-25 11:11:34 INFO  LoggingExamples:14 - info
+2021-06-25 11:11:34 WARN  LoggingExamples:15 - warning
+2021-06-25 11:11:34 ERROR LoggingExamples:16 - Error
+2021-06-25 11:11:34 FATAL LoggingExamples:17 - Fatal
+2021-06-30 14:42:01 DEBUG LoggingExamples:13 - statement for debuging
+2021-06-30 14:42:01 INFO  LoggingExamples:14 - info
+2021-06-30 14:42:01 WARN  LoggingExamples:15 - warning
+2021-06-30 14:42:01 ERROR LoggingExamples:16 - Error
+2021-06-30 14:42:01 FATAL LoggingExamples:17 - Fatal

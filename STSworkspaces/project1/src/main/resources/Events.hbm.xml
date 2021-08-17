@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jul 20, 2021, 9:36:04 PM by Hibernate Tools 5.4.30.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.nicolis.models.Events" optimistic-lock="none" polymorphism="implicit" schema="public" select-before-update="false" table="events">
+        <id name="evId" type="int">
+            <column name="ev_id"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one class="com.nicolis.models.EventTypes" embed-xml="true" fetch="select" insert="true" name="eventTypes" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="et_id"/>
+        </many-to-one>
+        <many-to-one class="com.nicolis.models.GradingFormats" embed-xml="true" fetch="select" insert="true" name="gradingFormats" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="gf_id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="startTime" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="start_time"/>
+        </property>
+        <property generated="never" lazy="false" name="endTime" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="end_time"/>
+        </property>
+        <property generated="never" lazy="false" name="cost" optimistic-lock="true" type="big_decimal" unique="false">
+            <column name="cost" precision="10"/>
+        </property>
+        <property generated="never" lazy="false" name="location" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="location"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="240" name="description"/>
+        </property>
+    </class>
+</hibernate-mapping>

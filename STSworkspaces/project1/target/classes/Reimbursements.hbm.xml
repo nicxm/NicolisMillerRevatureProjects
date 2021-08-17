@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jul 20, 2021, 9:36:04 PM by Hibernate Tools 5.4.30.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.nicolis.models.Reimbursements" optimistic-lock="none" polymorphism="implicit" schema="public" select-before-update="false" table="reimbursements">
+        <id name="RId" type="int">
+            <column name="r_id"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one class="com.nicolis.models.Employees" embed-xml="true" fetch="select" insert="true" name="employees" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="e_id"/>
+        </many-to-one>
+        <many-to-one class="com.nicolis.models.Events" embed-xml="true" fetch="select" insert="true" name="events" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="ev_id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="claim" optimistic-lock="true" type="big_decimal" unique="false">
+            <column name="claim" precision="6"/>
+        </property>
+        <property generated="never" lazy="false" name="grade" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="grade"/>
+        </property>
+        <property generated="never" lazy="false" name="reason" optimistic-lock="true" type="string" unique="false">
+            <column length="240" name="reason"/>
+        </property>
+        <property generated="never" lazy="false" name="SApproved" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="s_approved"/>
+        </property>
+        <property generated="never" lazy="false" name="depHeadApproved" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="dep_head_approved"/>
+        </property>
+        <property generated="never" lazy="false" name="benCoApproved" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="ben_co_approved"/>
+        </property>
+    </class>
+</hibernate-mapping>

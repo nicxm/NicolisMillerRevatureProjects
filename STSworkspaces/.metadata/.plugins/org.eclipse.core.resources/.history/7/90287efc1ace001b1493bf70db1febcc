@@ -1,5 +1,0 @@
-package com.example.model;
-
-public class Whale extends Mammal implements Swimmer{
-
-}

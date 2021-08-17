@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jul 20, 2021, 9:36:04 PM by Hibernate Tools 5.4.30.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.nicolis.models.Employees" optimistic-lock="none" polymorphism="implicit" schema="public" select-before-update="false" table="employees">
+        <id name="EId" type="int">
+            <column name="e_id"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one class="com.nicolis.models.Departments" embed-xml="true" fetch="select" insert="true" name="departments" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="dept_id"/>
+        </many-to-one>
+        <many-to-one class="com.nicolis.models.Employees" embed-xml="true" fetch="select" insert="true" name="employeesBySupervisorId" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="supervisor_id"/>
+        </many-to-one>
+        <many-to-one class="com.nicolis.models.Employees" embed-xml="true" fetch="select" insert="true" name="employeesByBenCoId" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="ben_co_id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="username" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="username"/>
+        </property>
+        <property generated="never" lazy="false" name="password" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="password"/>
+        </property>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="name"/>
+        </property>
+        <property generated="never" lazy="false" name="dob" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="dob"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="email"/>
+        </property>
+        <property generated="never" lazy="false" name="awardedR" optimistic-lock="true" type="big_decimal" unique="false">
+            <column name="awarded_r" precision="6"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

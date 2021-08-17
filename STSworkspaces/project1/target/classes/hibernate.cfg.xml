@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+		
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://nicolisproj0.cwll09ag1opl.us-east-1.rds.amazonaws.com/postgres
+		</property>
+		
+		<property name="hibernate.connection.username">
+			nicxm33
+		</property>
+		
+		<property name="hibernate.connection.password">
+			337SqAjnhkBgbvb
+		</property>
+		
+		<!-- Optional Properties -->
+		<property name="show_sql">
+			true
+		</property>
+		
+		<property name="hbm2ddl.auto">
+			update
+		</property>
+		
+		<property name="hibernate.enable_lazy_load_no_trans"> 
+			true
+		</property>
+		<!-- Class Mappings -->
+		<mapping resource="Attachments.hbm.xml" /> 
+		<mapping class="com.nicolis.models.Attachments" />
+		
+		<mapping resource="Departments.hbm.xml" /> 
+		<mapping class="com.nicolis.models.Departments" />
+		
+		<mapping resource="Employees.hbm.xml" /> 
+		<mapping class="com.nicolis.models.Employees" />
+		
+		<mapping resource="Events.hbm.xml" /> 
+		<mapping class="com.nicolis.models.Events" />
+		
+		<mapping resource="EventTypes.hbm.xml" /> 
+		<mapping class="com.nicolis.models.EventTypes" />
+		
+		<mapping resource="GradingFormats.hbm.xml" /> 
+		<mapping class="com.nicolis.models.GradingFormats" /> 
+		
+		<mapping resource="Presentations.hbm.xml" /> 
+		<mapping class="com.nicolis.models.Presentations" />
+		
+		<mapping resource="Reimbursements.hbm.xml" /> 
+		<mapping class="com.nicolis.models.Reimbursements" />
+		
+		<mapping resource="Requests.hbm.xml" /> 
+		<mapping class="com.nicolis.models.Requests" />
+		
+	</session-factory>
+</hibernate-configuration>

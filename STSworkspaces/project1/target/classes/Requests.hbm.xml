@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jul 20, 2021, 9:36:04 PM by Hibernate Tools 5.4.30.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.nicolis.models.Requests" optimistic-lock="none" polymorphism="implicit" schema="public" select-before-update="false" table="requests">
+        <id name="reqId" type="int">
+            <column name="req_id"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one class="com.nicolis.models.Employees" embed-xml="true" fetch="select" insert="true" name="employees" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="e_id"/>
+        </many-to-one>
+        <many-to-one class="com.nicolis.models.Reimbursements" embed-xml="true" fetch="select" insert="true" name="reimbursements" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="r_id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="message" optimistic-lock="true" type="string" unique="false">
+            <column length="240" name="message"/>
+        </property>
+        <property generated="never" lazy="false" name="approve" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="approve"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+2021-07-09 08:51:30 INFO  App:25 - Javalin started
+2021-07-09 10:01:57 INFO  App:25 - Javalin started
+2021-07-09 10:45:26 INFO  ClientController:60 - Client: 1 has been deleted
+2021-07-09 10:47:16 INFO  AccountController:141 - Account [id=2, funds=2448, accountType=Checking Account, client_id=2]
+2021-07-09 10:47:16 INFO  AccountController:142 - Account [id=3, funds=279, accountType=updated acc type, client_id=2]
+2021-07-09 10:47:16 INFO  AccountController:143 - Funds: 42 from account: 2 have been transferred to account: 3
+2021-07-09 10:56:29 INFO  App:25 - Javalin started
+2021-07-09 11:00:20 INFO  App:25 - Javalin started
+2021-07-09 11:03:56 INFO  App:25 - Javalin started
+2021-07-09 11:04:43 INFO  App:25 - Javalin started
+2021-07-09 11:07:04 INFO  App:25 - Javalin started
+2021-07-09 11:07:32 INFO  App:25 - Javalin started
+2021-07-09 11:26:21 INFO  App:25 - Javalin started
+2021-07-09 11:26:24 INFO  App:25 - Javalin started
+2021-07-13 11:27:51 INFO  App:25 - Javalin started
+2021-07-13 12:00:13 INFO  App:25 - Javalin started
+2021-07-13 12:00:42 INFO  App:25 - Javalin started
+2021-07-13 12:00:53 INFO  App:25 - Javalin started
+2021-07-13 12:01:13 INFO  App:25 - Javalin started
+2021-07-13 12:01:53 INFO  App:25 - Javalin started
